@@ -3,7 +3,7 @@
 int main()
 {  
 	char data[30];
-	FILE *fp = fopen("10.691m8h_20171127_gps.txt", "r");
+	FILE *fp = fopen("textname.txt", "r");
 	if (fp == NULL)
 	{
 		return 0;
@@ -15,6 +15,6 @@ int main()
 	}
 	printf("\n");
 	fclose(fp);
-	getchar();//µÈ´ý  
+	getchar();       //waiting time
 	return 0;
 }
