@@ -1,8 +1,8 @@
 #include <stdio.h>  
 
-int main()
+int main(void)
 {  
-	char data[30];
+	char data[20];
 	FILE *fp = fopen("textname.txt", "r");
 	if (fp == NULL)
 	{
@@ -11,7 +11,7 @@ int main()
 	while (!feof(fp))   //detect the terminator
 	{
 		fscanf(fp, "%s", data);
-		printf("%4s", data);
+		printf("%2s", data);
 	}
 	printf("\n");
 	fclose(fp);
