@@ -22,7 +22,7 @@ int main(void)
 	while (fgets(line, sizeof(line), file)) { //fgets read file by lines, ended by while circle at the end of the file
 		sscanf(line, "%*s %s", str);//sscanf analysis the data by lines, pass the first line(see the usage of sscanf)
 		double y;
-		y = atof(str);     //change to double
+		y = atof(str);     //change to float
 		double a[NUM];
 		if (i < NUM) {
 			a[i] = y;
