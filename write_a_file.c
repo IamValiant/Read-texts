@@ -6,7 +6,7 @@
 
 int main(void)
 {
-	FILE* file = fopen("10.691m8h_20171127_gps.txt", "r");
+	FILE* file = fopen("filename.txt", "r");
 	char line[256];   //save a line
 	char str[20];    //save the second list
 	//double y;   //the value of the second list(changed to double first)
@@ -24,10 +24,11 @@ int main(void)
 		double y;
 		y = atof(str);     //change to double
 		double a[NUM],b[NUM];
-		if (i < NUM) {   //外调粗大误差处理函数（条件改为i<+100）
+		if (i < NUM) {
 			a[i] = y;
 			b[i] = a[i];
 			printf("a[%d]=%f\n",i,a[i]);
+			//wite a file
 			FILE *fpWrite = fopen("data.txt", "a+");
 				fprintf(fpWrite, "%f\n", a[i]);
 			fclose(fpWrite);
